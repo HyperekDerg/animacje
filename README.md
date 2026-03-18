@@ -5,5 +5,5 @@ Repozytorium z zadaniami laboratoryjnymi z zajęć Systemy Animacji.
 Jakub Rudnicki
 
 ## GitHub Pages
-- Lab 2:
-- Lab 3:
+- Lab 2: https://hyperekderg.github.io/animacje/Lab_02/js/
+- Lab 3: https://hyperekderg.github.io/animacje/Lab_03
