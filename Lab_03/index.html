@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Rudnicki - Lab3</title>
+</head>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #000;
+      overflow: hidden;
+      font-family: monospace;
+      cursor: crosshair;
+    }
+
+    canvas { display: block; }
+
+    #ui {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 10;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #ui label {
+      color: #aaa;
+      font-size: 12px;
+      width: 90px;
+    }
+
+    #ui input[type=range] {
+      width: 120px;
+      cursor: pointer;
+      accent-color: #fff;
+    }
+
+    #ui span.val {
+      color: #fff;
+      font-size: 12px;
+      width: 36px;
+    }
+
+    #poolToggle {
+      background: none;
+      border: 1px solid #555;
+      color: #aaa;
+      padding: 2px 10px;
+      font-size: 12px;
+      font-family: monospace;
+      cursor: pointer;
+    }
+
+    #poolToggle.active {
+      border-color: #fff;
+      color: #fff;
+    }
+
+    #stats {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      color: #666;
+      font-size: 12px;
+      line-height: 1.8;
+      text-align: right;
+      z-index: 10;
+    }
+
+    #stats span { color: #ccc; }
+
+    #hint {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #444;
+      font-size: 12px;
+      pointer-events: none;
+      z-index: 10;
+      transition: opacity 0.5s;
+    }
+  </style>
+</head>
+<body>
+<div id="ui">
+  <div class="row">
+    <label>Cząsteczki</label>
+    <input type="range" id="countSlider" min="30" max="3000" value="120" step="10" />
+    <span class="val" id="countVal">120</span>
+  </div>
+  <div class="row">
+    <label>Grawitacja</label>
+    <input type="range" id="gravSlider" min="1" max="50" value="15" step="1" />
+    <span class="val" id="gravVal">0.15</span>
+  </div>
+  <div class="row">
+    <button id="poolToggle">Pooling: OFF</button>
+  </div>
+</div>
+
+<div id="stats">
+  FPS: <span id="fpsVal">--</span><br>
+  Rakiety: <span id="rocketVal">0</span><br>
+  Cząsteczki: <span id="particleVal">0</span><br>
+  Tryb: <span id="modeVal">Standard</span>
+</div>
+
+<div id="hint">kliknij aby wystrzelić</div>
+
+<canvas id="canvas"></canvas>
+
+<script src="main.js"></script>
+    
+</body>
+</html>
