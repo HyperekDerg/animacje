@@ -8,7 +8,7 @@ Liście rozłożone są wzdłuż łodygi według kąta złotego (137.5°), każd
 
 Zrealizowano zadania dodatkowe: rozmieszczenie korzeni i liści przy użyciu `math.sin()` / `math.cos()`.
 
-[Roslina](./roslinabio.png)
+![Roslina](https://raw.githubusercontent.com/HyperekDerg/animacje/main/Lab_04/roslinabio.png)
 
 ## Trudności / refleksja
 
